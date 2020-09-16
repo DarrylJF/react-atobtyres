@@ -37,3 +37,11 @@
     display: none!important;
   }
 }
+
+@media (min-width: 950px) {
+  ul {
+    li:first-of-type{
+      visibility: hidden;
+    }
+  }
+}
