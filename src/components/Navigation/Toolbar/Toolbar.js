@@ -5,15 +5,15 @@ import DrawerToggle from '../../Navigation/SideDrawer/DrawerToggle/DrawerToggle'
 import NavigationItems from '../NavigationItems/NavigationItems';
 
 
-const toolbar = () => (
+const toolbar = (props) => (
     <header className={classes.Toolbar}>
         <div>
-            <Logo/>
+            <Logo height={"80px"}/>
         </div>
         <nav>
             <NavigationItems/>
         </nav>
-        <DrawerToggle/>
+        <DrawerToggle clicked={props.open}/>
     </header>
 );
 

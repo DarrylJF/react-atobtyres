@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from './components/Layout/Layout';
 import  classes from './App.module.scss';
 
-function App() {
+const App = () => {
   return (
     <div className={classes.App}>
      <Layout>
@@ -10,6 +10,6 @@ function App() {
      </Layout>
     </div>
   );
-}
+};
 
 export default App;

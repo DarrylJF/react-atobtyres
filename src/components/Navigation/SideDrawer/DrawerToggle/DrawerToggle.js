@@ -2,9 +2,9 @@ import React from "react";
 import {FaBars} from "react-icons/fa";
 import classes from './DrawerToggle.module.scss';
 
-const drawerToggle = () => (
+const drawerToggle = (props) => (
     <div className={classes.DrawerToggle}>
-        <FaBars/>
+        <FaBars onClick={props.clicked}/>
     </div>
 );
 

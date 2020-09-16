@@ -1,12 +1,25 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useState} from "react";
 import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
-const layout = (props) => {
+const Layout = (props) => {
+
+    const [showSideDrawer, setShowSideDrawer] = useState(false);
+
+   function sideDrawerCloseHandler() {
+       setShowSideDrawer(false);
+   }
+
+   function sideDrawerOpenHandler() {
+       setShowSideDrawer(true);
+   }
 
     return (
         <Fragment>
-            <Toolbar/>
-            {/*<SideDrawer/>*/}
+            <Toolbar open={sideDrawerOpenHandler}/>
+            <SideDrawer
+                show={showSideDrawer}
+                closed={sideDrawerCloseHandler}/>
             {/*<Hero/>*/}
             <main>
                 {props.children}
@@ -16,4 +29,4 @@ const layout = (props) => {
     )
 };
 
-export default layout;
+export default Layout;
