@@ -1,18 +1,20 @@
 import React, {Fragment, useState} from "react";
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
+import Hero from '../UI/Hero/HomeHero';
+
 
 const Layout = (props) => {
 
     const [showSideDrawer, setShowSideDrawer] = useState(false);
 
-   function sideDrawerCloseHandler() {
+   const sideDrawerCloseHandler = () => {
        setShowSideDrawer(false);
-   }
+   };
 
-   function sideDrawerOpenHandler() {
+   const sideDrawerOpenHandler =() => {
        setShowSideDrawer(true);
-   }
+   };
 
     return (
         <Fragment>
@@ -20,9 +22,8 @@ const Layout = (props) => {
             <SideDrawer
                 show={showSideDrawer}
                 closed={sideDrawerCloseHandler}/>
-            {/*<Hero/>*/}
             <main>
-                {props.children}
+                <Hero/>
             </main>
             {/*<Footer/>*/}
         </Fragment>

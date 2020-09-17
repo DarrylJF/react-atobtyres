@@ -1,0 +1,65 @@
+.Hero {
+  height: 90vh;
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  .HeroContainer{
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .HeroContent {
+    flex-grow: 1;
+    padding: 100px 0;
+    h1 {
+      text-transform: uppercase;
+      margin: 0 auto 1.25rem;
+      font-weight: 900;
+      max-width: 650px;
+      text-align: center;
+      font-size: 70px;
+      letter-spacing: -2px;
+      color:white;
+    }
+    .Marks {
+      color: #e53333;
+      margin-right: 10px;
+    }
+    .Arrows {
+      font-size: 60px;
+      text-align: center;
+      color:  #e53333;
+      svg {
+        stroke-width: .5px;
+      }
+    }
+  }
+  .Social {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    font-weight: 700;
+    a {
+      margin-right: 30px;
+      color: white;
+      font-size: 3em;
+    }
+  }
+  .Phone {
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+    font-weight: 700;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+    }
+  }
+}
